@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/EAD GROUP SHARE/EAD COMBINED APP/OUR FUEL ONE/app/src/main/res/drawable/fund_border_red.xml" value="0.258" />
+        <entry key="..\:/EAD GROUP SHARE/EAD COMBINED APP/OUR FUEL ONE/app/src/main/res/drawable/rkbuttons.xml" value="0.2595" />
+        <entry key="..\:/EAD GROUP SHARE/EAD COMBINED APP/OUR FUEL ONE/app/src/main/res/drawable/rkinputs.xml" value="0.2595" />
+        <entry key="..\:/EAD GROUP SHARE/EAD COMBINED APP/OUR FUEL ONE/app/src/main/res/layout/activity_authentication.xml" value="0.264" />
+        <entry key="..\:/EAD GROUP SHARE/EAD COMBINED APP/OUR FUEL ONE/app/src/main/res/layout/activity_first_navigation.xml" value="0.25416666666666665" />
+        <entry key="..\:/EAD GROUP SHARE/EAD COMBINED APP/OUR FUEL ONE/app/src/main/res/layout/activity_fual_owner.xml" value="0.17119565217391305" />
+        <entry key="..\:/EAD GROUP SHARE/EAD COMBINED APP/OUR FUEL ONE/app/src/main/res/layout/activity_fual_user.xml" value="0.264" />
+        <entry key="..\:/EAD GROUP SHARE/EAD COMBINED APP/OUR FUEL ONE/app/src/main/res/layout/activity_main.xml" value="0.10536980749746708" />
+        <entry key="..\:/EAD GROUP SHARE/EAD COMBINED APP/OUR FUEL ONE/app/src/main/res/layout/activity_register.xml" value="0.264" />
+        <entry key="..\:/EAD GROUP SHARE/EAD COMBINED APP/OUR FUEL ONE/app/src/main/res/layout/activity_student.xml" value="0.17119565217391305" />
+        <entry key="..\:/EAD GROUP SHARE/EAD COMBINED APP/OUR FUEL ONE/app/src/main/res/layout/rkbuttons.xml" value="0.25416666666666665" />
+        <entry key="..\:/EAD Special Location/OUR FUEL ONE/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/EAD Special Location/OUR FUEL ONE/app/src/main/res/layout/login_dialog.xml" value="0.25416666666666665" />
+        <entry key="..\:/EAD Special Location/OUR FUEL ONE/app/src/main/res/layout/signup_dialog.xml" value="0.25416666666666665" />
+        <entry key="..\:/SPECIAL EAD FRONTEND/OUR FUEL ONE/app/src/main/res/layout/activity_first_navigation.xml" value="0.11302083333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

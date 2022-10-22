@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fund_background"
+    android:orientation="vertical"
+    tools:context=".VehicleAddToFualQ">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fund_background">
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="335dp"
+            android:layout_height="24dp"
+            android:text="Please Enter Your Type of Vehicle Here,"
+            android:textColor="#403C3C"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.552"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mapView2"
+            app:layout_constraintVertical_bias="0.232" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="323dp"
+            android:layout_height="26dp"
+            android:text="Please Enter Your Vehicle Arrivel Time Here,"
+            android:textColor="#403C3C"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.477"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mapView2"
+            app:layout_constraintVertical_bias="0.387" />
+
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="321dp"
+            android:layout_height="45dp"
+            android:text="Please Select The Station Now You  Have Reached,"
+            android:textColor="#403C3C"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mapView2"
+            app:layout_constraintVertical_bias="0.553" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="313dp"
+            android:layout_height="76dp"
+            android:text="By Clicking On the Following your vehicle is adding to the current petrol Queue of above filling station."
+            android:textColor="#403C3C"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.459"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mapView2"
+            app:layout_constraintVertical_bias="0.789" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="72dp"
+            android:text="Vehicle Entering for Queue Potral"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="372dp"
+            android:layout_height="112dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.589"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.895"
+            app:srcCompat="@drawable/account_box" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="170dp"
+            android:layout_height="33dp"
+            android:text="Add to Queue"
+            android:textColor="#322E2E"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.539"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.147" />
+
+        <Button
+            android:id="@+id/textView4"
+            android:layout_width="178dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="164dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/fund_border_blue"
+            android:onClick="sendToInitialLanding"
+            android:text="Back to Home"
+            android:textColor="#322E2E"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="341dp"
+            android:layout_height="25dp"
+            android:text="Please Enter Your Vehicle Number Here,"
+            android:textColor="#403C3C"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.614"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mapView2"
+            app:layout_constraintVertical_bias="0.069" />
+
+        <EditText
+            android:id="@+id/amount"
+            android:layout_width="318dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/fund_border_blue"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="#686161"
+            android:textColorHint="#686161"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.439"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <EditText
+            android:id="@+id/amount2"
+            android:layout_width="318dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/fund_border_blue"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="#686161"
+            android:textColorHint="#686161"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <EditText
+            android:id="@+id/amount3"
+            android:layout_width="318dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/fund_border_blue"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="#686161"
+            android:textColorHint="#686161"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <EditText
+            android:id="@+id/amount4"
+            android:layout_width="318dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/fund_border_blue"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="#686161"
+            android:textColorHint="#686161"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.451"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/AddtoQButton"
+            android:layout_width="313dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginEnd="42dp"
+            android:layout_marginBottom="52dp"
+            android:background="@drawable/fund_border_red"
+            android:onClick="AddtoQueue"
+            android:text="Add My Vehicle to Queue"
+            android:textColor="#1515F0"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.071"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/mapView2"
+            android:layout_width="64dp"
+            android:layout_height="68dp"
+            android:layout_marginBottom="560dp"
+            android:background="@drawable/meter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.135"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
+

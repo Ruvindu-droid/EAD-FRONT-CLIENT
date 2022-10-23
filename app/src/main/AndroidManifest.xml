@@ -13,6 +13,9 @@
         android:theme="@style/Theme.FualApp"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".CheckMyVehicleInQ"
+            android:exported="false" />
+        <activity
             android:name=".VehicleAddToFualQ"
             android:exported="false" />
         <activity

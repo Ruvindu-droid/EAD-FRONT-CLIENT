@@ -143,7 +143,7 @@
             app:layout_constraintVertical_bias="0.069" />
 
         <EditText
-            android:id="@+id/amount"
+            android:id="@+id/vehicleNo"
             android:layout_width="318dp"
             android:layout_height="36dp"
             android:layout_marginStart="6dp"
@@ -162,7 +162,7 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <EditText
-            android:id="@+id/amount2"
+            android:id="@+id/vehicleType"
             android:layout_width="318dp"
             android:layout_height="36dp"
             android:layout_marginStart="6dp"
@@ -181,7 +181,7 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <EditText
-            android:id="@+id/amount3"
+            android:id="@+id/arrivalTime"
             android:layout_width="318dp"
             android:layout_height="36dp"
             android:layout_marginStart="6dp"
@@ -200,7 +200,7 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <EditText
-            android:id="@+id/amount4"
+            android:id="@+id/stationName"
             android:layout_width="318dp"
             android:layout_height="36dp"
             android:layout_marginStart="6dp"

@@ -20,16 +20,17 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static String BASE_URL2 = "http://10.0.2.2:3000";
     private Retrofit retrofit;
     private RetrofitInterface retrofitInterface;
 
     /***  Use your Emulator or Real Device Accordingly for TESTING Processes (Please keep Default when Comitting )***/
 
     // IF you are using the Emulator :-
-    //    private String BASE_URL = "http://10.0.2.2:3000";
+        private String BASE_URL = "http://10.0.2.2:3000";
 
     //  If you using a Real Device :- (Connect to same network both Lap and mobile, add the IP here)
-      private String BASE_URL = "http://192.168.8.159:3000";
+//      private String BASE_URL = "http://192.168.8.159:3000";
 
     /***  ------------------------------------------------------------------------------------------------------  ***/
 
@@ -192,6 +193,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+    //Button action to navigate to the FuelUser
+    public void move1(View view) {
+        Toast.makeText(MainActivity.this, "Fual user", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MainActivity.this, FualUser.class);
+        startActivity(intent);
+    }
 
 }

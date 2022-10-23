@@ -196,7 +196,7 @@ public class MainActivity extends AppCompatActivity {
     //Button action to navigate to the FuelUser
     public void move1(View view) {
         Toast.makeText(MainActivity.this, "Fual user", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(MainActivity.this, FualUser.class);
+        Intent intent = new Intent(MainActivity.this, CheckMyVehicleInQ.class);
         startActivity(intent);
     }
 

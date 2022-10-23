@@ -17,4 +17,10 @@ public interface RetrofitInterface {
     @POST("/normaluser/create-R-normal-user")
     Call<Void> executeAddNewVehicle (@Body HashMap<String, String> map);
 
+    @POST("/normaluser/get-R-normal-user-by-vehicle-number")
+    Call<com.example.fualapp.VehicleResult> loadvehicledata(@Body HashMap<String, String> map);
+
+    @POST("/normaluser/Delete-R-normal-user-by-vehicle-number")
+    Call<Void> executeRemoveVehicle (@Body HashMap<String, String> map);
+
 }

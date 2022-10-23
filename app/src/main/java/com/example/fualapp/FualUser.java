@@ -43,7 +43,7 @@ public class FualUser extends AppCompatActivity {
     }
 
     public void sendToViewmyVehicleStatus(View view) {
-        Intent intent = new Intent(this,  MainActivity.class); // Rename with correct page
+        Intent intent = new Intent(this,  CheckMyVehicleInQ.class); // Rename with correct page
         Button image = (Button) findViewById(R.id.button2);
         startActivity(intent);
     }

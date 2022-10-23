@@ -14,4 +14,7 @@ public interface RetrofitInterface {
     @POST("/site/create")
     Call<Void> executeSignup (@Body HashMap<String, String> map);
 
+    @POST("/normaluser/create-R-normal-user")
+    Call<Void> executeAddNewVehicle (@Body HashMap<String, String> map);
+
 }

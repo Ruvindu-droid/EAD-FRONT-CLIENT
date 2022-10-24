@@ -56,6 +56,9 @@ public class VehicleAddToFualQ extends AppCompatActivity {
 
     public void AddtoQueue(View view) {
 
+        //Calling Station Queue Increasing Methord :-
+        AddMyVehicletoStationQueue();
+
         // Extra Button Identification :-
         Button image = (Button) findViewById(R.id.AddtoQButton);
         HashMap<String, String> map = new HashMap<>();
@@ -90,6 +93,43 @@ public class VehicleAddToFualQ extends AppCompatActivity {
         });
 
     }
+
+
+
+    // New Adding For Removing Vehicle from Station Queue :-
+
+    public void AddMyVehicletoStationQueue() {
+
+        HashMap<String, String> map = new HashMap<>();
+
+        map.put("stationname", stationName.getText().toString());
+
+        Call<Void> call = retrofitInterface.executeAddVehicletoStationQueue(map);
+
+        call.enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+
+                if (response.code() == 200) {
+                    Toast.makeText(VehicleAddToFualQ.this,
+                            "Station Notified that you are IN !", Toast.LENGTH_LONG).show();
+
+                } else if (response.code() == 404) {
+                    Toast.makeText(VehicleAddToFualQ.this,
+                            "Sorry! Station Unable to know that you are IN !", Toast.LENGTH_LONG).show();
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+                Toast.makeText(VehicleAddToFualQ.this, t.getMessage(),
+                        Toast.LENGTH_LONG).show();
+            }
+        });
+
+    }
+
 
 
 

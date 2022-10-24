@@ -7,7 +7,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.HashMap;
@@ -97,6 +96,9 @@ public class CheckMyVehicleInQ extends AppCompatActivity {
 
     public void RemoveMyVehicle(View view) {
 
+        //Calling Station Queue Reducing Methord :-
+        RemoveMyVehiclefromStationQueue();
+
         // Extra Button Identification :-
         Button image = (Button) findViewById(R.id.addtoQButton);
         Button image2 = (Button) findViewById(R.id.AddtoQButton);
@@ -113,7 +115,7 @@ public class CheckMyVehicleInQ extends AppCompatActivity {
 
                 if (response.code() == 200) {
                     Toast.makeText(CheckMyVehicleInQ.this,
-                            "Your Vehicle Removed from Fuel Queue Successfully !", Toast.LENGTH_LONG).show();
+                            "Your Vehicle Removed from Fuel Queue Successfully!", Toast.LENGTH_LONG).show();
 
                     vehicleNo.setText("");
                     arrivalTime.setText("");
@@ -142,6 +144,40 @@ public class CheckMyVehicleInQ extends AppCompatActivity {
 
     }
 
+
+    // New Adding For Removing Vehicle from Station Queue :-
+
+    public void RemoveMyVehiclefromStationQueue() {
+
+        HashMap<String, String> map = new HashMap<>();
+
+        map.put("stationname", stationName.getText().toString());
+
+        Call<Void> call = retrofitInterface.executeRemoveVehiclefromStationQueue(map);
+
+        call.enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+
+                if (response.code() == 200) {
+                    Toast.makeText(CheckMyVehicleInQ.this,
+                            "Station Notified that you are Removed !", Toast.LENGTH_LONG).show();
+
+                } else if (response.code() == 404) {
+                    Toast.makeText(CheckMyVehicleInQ.this,
+                            "Invalid Removing from Station Detected !", Toast.LENGTH_LONG).show();
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+                Toast.makeText(CheckMyVehicleInQ.this, t.getMessage(),
+                        Toast.LENGTH_LONG).show();
+            }
+        });
+
+    }
 
     public void sendToInitialLanding(View view) {
         Intent intent = new Intent(this,  FualUser.class);

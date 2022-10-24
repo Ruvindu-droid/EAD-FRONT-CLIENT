@@ -23,4 +23,10 @@ public interface RetrofitInterface {
     @POST("/normaluser/Delete-R-normal-user-by-vehicle-number")
     Call<Void> executeRemoveVehicle (@Body HashMap<String, String> map);
 
+    @POST("/station/decrment-r-queue-by-special-function")
+    Call<Void> executeRemoveVehiclefromStationQueue (@Body HashMap<String, String> map);
+
+    @POST("/station/increment-r-queue-by-special-function")
+    Call<Void> executeAddVehicletoStationQueue (@Body HashMap<String, String> map);
+
 }

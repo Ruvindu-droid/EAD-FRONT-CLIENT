@@ -13,6 +13,20 @@
         android:theme="@style/Theme.FualApp"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Retrievestationdetails"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".StationOwner"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".CheckFuelStatusForMe"
             android:exported="false">
             <meta-data

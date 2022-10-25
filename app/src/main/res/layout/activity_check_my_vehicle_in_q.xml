@@ -160,18 +160,18 @@
             app:layout_constraintTop_toBottomOf="@+id/mapView2"
             app:layout_constraintVertical_bias="0.184" />
 
-        <EditText
+        <TextView
             android:id="@+id/amount6"
             android:layout_width="194dp"
             android:layout_height="30dp"
             android:layout_marginStart="6dp"
             android:layout_marginEnd="5dp"
             android:background="@drawable/fund_border_blue"
-            android:inputType="text"
             android:padding="10dp"
             android:textColor="#686161"
             android:textColorHint="#686161"
             android:textSize="14sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.849"
@@ -180,18 +180,18 @@
             app:layout_constraintVertical_bias="0.383"
             tools:ignore="SpeakableTextPresentCheck" />
 
-        <EditText
+        <TextView
             android:id="@+id/amount8"
             android:layout_width="193dp"
             android:layout_height="31dp"
             android:layout_marginStart="6dp"
             android:layout_marginEnd="5dp"
             android:background="@drawable/fund_border_blue"
-            android:inputType="text"
             android:padding="10dp"
             android:textColor="#686161"
             android:textColorHint="#686161"
             android:textSize="14sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.845"
@@ -200,14 +200,14 @@
             app:layout_constraintVertical_bias="0.46"
             tools:ignore="SpeakableTextPresentCheck" />
 
-        <EditText
+        <TextView
             android:id="@+id/amount9"
             android:layout_width="193dp"
             android:layout_height="31dp"
             android:layout_marginStart="6dp"
             android:layout_marginEnd="5dp"
             android:background="@drawable/fund_border_blue"
-            android:inputType="text"
+            android:textStyle="bold"
             android:padding="10dp"
             android:textColor="#686161"
             android:textColorHint="#686161"

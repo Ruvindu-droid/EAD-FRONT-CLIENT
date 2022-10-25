@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 public interface RetrofitInterface {
@@ -28,5 +29,12 @@ public interface RetrofitInterface {
 
     @POST("/station/increment-r-queue-by-special-function")
     Call<Void> executeAddVehicletoStationQueue (@Body HashMap<String, String> map);
+
+    @POST("/station/find-r-station-by-name")
+    Call<com.example.fualapp.StationResult> loadstationdata(@Body HashMap<String, String> map);
+
+    @POST("/station/get-r-all-station")
+    Call<com.example.fualapp.StationResult[]> loadallstations();
+
 
 }

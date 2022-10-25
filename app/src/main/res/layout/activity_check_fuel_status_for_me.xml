@@ -208,19 +208,19 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.77" />
 
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="72dp"
-            android:text="Check my Vehicle in Fual Queue"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="112dp"
+            android:text="Station Status On Time"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
 
         <ImageView
             android:id="@+id/imageView4"
@@ -357,15 +357,15 @@
             app:layout_constraintVertical_bias="0.535"
             tools:ignore="SpeakableTextPresentCheck" />
 
-        <EditText
+        <Spinner
             android:id="@+id/amount7"
-            android:layout_width="228dp"
-            android:layout_height="30dp"
+            android:layout_width="229dp"
+            android:layout_height="38dp"
             android:layout_marginStart="6dp"
             android:layout_marginEnd="5dp"
-            android:background="@drawable/fund_border_blue"
-            android:inputType="text"
+            android:background="@android:drawable/btn_dropdown"
             android:padding="10dp"
+            android:spinnerMode="dropdown"
             android:textColor="#686161"
             android:textColorHint="#686161"
             android:textSize="14sp"
@@ -385,7 +385,7 @@
             android:layout_marginEnd="42dp"
             android:layout_marginBottom="84dp"
             android:background="@drawable/fund_border_red"
-
+            android:onClick="LoadStations"
             android:text="Add My Vehicle To Queue Here"
             android:textColor="#1515F0"
             android:textSize="11sp"

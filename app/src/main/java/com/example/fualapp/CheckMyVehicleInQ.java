@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,7 +23,8 @@ public class CheckMyVehicleInQ extends AppCompatActivity {
     private Retrofit retrofit;
     private RetrofitInterface retrofitInterface;
 
-    EditText vehicleNo, vehicleType, arrivalTime, stationName;
+    EditText vehicleNo;
+    TextView vehicleType, arrivalTime, stationName;
     Button SerchQButton,UnableTakingOffButton,FilledTakingOffButton;
 
     @Override

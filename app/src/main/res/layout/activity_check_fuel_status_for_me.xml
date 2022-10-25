@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fund_background"
+    android:orientation="vertical"
+    tools:context=".CheckFuelStatusForMe">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fund_background">
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="128dp"
+            android:layout_height="20dp"
+            android:text="Started Line at :"
+            android:textColor="#403C3C"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.134"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mapView2"
+            app:layout_constraintVertical_bias="0.298" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="105dp"
+            android:layout_height="25dp"
+            android:text="Fuel Status :"
+            android:textColor="#403C3C"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.124"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mapView2"
+            app:layout_constraintVertical_bias="0.381" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="144dp"
+            android:layout_height="25dp"
+            android:text=" Status of Petrol"
+            android:textColor="#403C3C"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mapView2"
+            app:layout_constraintVertical_bias="0.467" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="144dp"
+            android:layout_height="25dp"
+            android:text=" Status of Diesel"
+            android:textColor="#403C3C"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.535"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mapView2"
+            app:layout_constraintVertical_bias="0.639" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="134dp"
+            android:layout_height="24dp"
+            android:text="Diasel Arrival Time :"
+            android:textColor="#403C3C"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.129"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.77" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="129dp"
+            android:layout_height="23dp"
+            android:text="Diasel Ended at :"
+            android:textColor="#403C3C"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.127"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.805" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="138dp"
+            android:layout_height="22dp"
+            android:text="Petrol Arrival Time :"
+            android:textColor="#403C3C"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.139"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.643" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="133dp"
+            android:layout_height="25dp"
+            android:text="Petrol Ended at :"
+            android:textColor="#403C3C"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.136"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.682" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="163dp"
+            android:layout_height="24dp"
+            android:text="Station Queue Ontime :"
+            android:textColor="#403C3C"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.153"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.364" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="169dp"
+            android:layout_height="24dp"
+            android:textColor="#403C3C"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.851"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.364" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="191dp"
+            android:layout_height="24dp"
+            android:textColor="#403C3C"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.84"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.806" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="186dp"
+            android:layout_height="26dp"
+            android:textColor="#403C3C"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.844"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.646" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="193dp"
+            android:layout_height="24dp"
+            android:textColor="#403C3C"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.834"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.681" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="194dp"
+            android:layout_height="26dp"
+            android:textColor="#403C3C"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.838"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.77" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="72dp"
+            android:text="Check my Vehicle in Fual Queue"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="372dp"
+            android:layout_height="112dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.48"
+            app:srcCompat="@drawable/account_box" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="264dp"
+            android:layout_height="24dp"
+            android:text="Please Eneter The Station Reached :"
+            android:textColor="#322E2E"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.863"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.145" />
+
+        <Button
+            android:id="@+id/textView4"
+            android:layout_width="226dp"
+            android:layout_height="41dp"
+            android:background="@drawable/fund_border_blue"
+
+            android:text="Check Fuel Station Status"
+            android:textColor="#322E2E"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.205"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.298" />
+
+        <Button
+            android:id="@+id/textView11"
+            android:layout_width="171dp"
+            android:layout_height="40dp"
+            android:background="@drawable/fund_border_blue"
+            android:onClick="sendToInitialLanding"
+            android:text="Back to Home"
+            android:textColor="#322E2E"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.812"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.947" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="122dp"
+            android:layout_height="29dp"
+            android:text="Vehicles Waiting:"
+            android:textColor="#403C3C"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.131"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mapView2"
+            app:layout_constraintVertical_bias="0.225" />
+
+        <TextView
+            android:id="@+id/amount6"
+            android:layout_width="194dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/fund_border_blue"
+            android:padding="10dp"
+            android:textColor="#686161"
+            android:textColorHint="#686161"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.854"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.415"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/amount8"
+            android:layout_width="193dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/fund_border_blue"
+            android:padding="10dp"
+            android:textColor="#686161"
+            android:textColorHint="#686161"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.855"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.474"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/amount9"
+            android:layout_width="193dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/fund_border_blue"
+            android:padding="10dp"
+            android:textColor="#686161"
+            android:textColorHint="#686161"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.85"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.535"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <EditText
+            android:id="@+id/amount7"
+            android:layout_width="228dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/fund_border_blue"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="#686161"
+            android:textColorHint="#686161"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.72"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.201"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/AddtoQButton"
+            android:layout_width="321dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginEnd="42dp"
+            android:layout_marginBottom="84dp"
+            android:background="@drawable/fund_border_red"
+
+            android:text="Add My Vehicle To Queue Here"
+            android:textColor="#1515F0"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/mapView2"
+            android:layout_width="64dp"
+            android:layout_height="68dp"
+            android:layout_marginBottom="560dp"
+            android:background="@drawable/test3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.121"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
+

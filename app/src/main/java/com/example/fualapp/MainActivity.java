@@ -20,6 +20,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Button button1,button2;
     public static String BASE_URL2 = "http://10.0.2.2:3000";
     private Retrofit retrofit;
     private RetrofitInterface retrofitInterface;
@@ -47,6 +48,22 @@ public class MainActivity extends AppCompatActivity {
         retrofitInterface = retrofit.create(RetrofitInterface.class);
 
 
+        button1 = (Button) findViewById(R.id.button1);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, StationOwner.class);
+                startActivity(intent);
+            }
+        });
+        button2 = (Button) findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Retrievestationdetails.class);
+                startActivity(intent);
+            }
+        });
 
 
         //01

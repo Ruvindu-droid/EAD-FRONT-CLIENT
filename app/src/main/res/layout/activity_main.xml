@@ -23,13 +23,41 @@
         android:layout_below="@id/login" />
 
     <Button
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TEST SQL LITE"
-        android:onClick="GoRegAct"
-        android:id="@+id/testauth"
+        android:layout_below="@id/signup"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="143dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginBottom="93dp"
+        android:text="Nethmi" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signup"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="74dp"
+        android:layout_marginEnd="157dp"
+        android:layout_marginBottom="163dp"
+        android:text="Nethmi" />
+
+    <Button
+        android:id="@+id/testauth2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signup"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/signup" />
+        android:onClick="GoRegAct"
+        android:text="TEST SQL LITE" />
 
     <Button
         android:id="@+id/addVehicleBtn"

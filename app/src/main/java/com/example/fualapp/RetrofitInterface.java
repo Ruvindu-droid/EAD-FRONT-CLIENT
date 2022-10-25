@@ -29,4 +29,13 @@ public interface RetrofitInterface {
     @POST("/station/increment-r-queue-by-special-function")
     Call<Void> executeAddVehicletoStationQueue (@Body HashMap<String, String> map);
 
+    @POST("/station/find-r-station-by-name")
+    Call<StationResult> executeRetrieveDetails (@Body HashMap<String, String> map);
+
+    @POST("/station/create-r-station")
+    Call<Void> executeStationownerdetails (@Body HashMap<String, String> map);
+
+    @POST("/station/update-station-by-name/:id")
+    Call<Void> updateStationownerdetails (@Body HashMap<String, String> map);
+
 }

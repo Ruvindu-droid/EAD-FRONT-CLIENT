@@ -36,6 +36,7 @@ public interface RetrofitInterface {
     @POST("/station/get-r-all-station")
     Call<com.example.fualapp.StationResult[]> loadallstations();
 
+    @POST("/station/find-r-station-by-name")
     Call<StationResult> executeRetrieveDetails (@Body HashMap<String, String> map);
 
     @POST("/station/create-r-station")

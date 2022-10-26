@@ -37,7 +37,7 @@ public class FualUser extends AppCompatActivity {
     // Implimet Methordes From Here :-
 
     public void sendToAddToQ(View view) {
-        Intent intent = new Intent(this,  VehicleAddToFualQ.class); // Rename with correct page
+        Intent intent = new Intent(this,  CheckFuelStatusForMe.class); // Rename with correct page
         Button image = (Button) findViewById(R.id.button);
         startActivity(intent);
     }
@@ -47,13 +47,6 @@ public class FualUser extends AppCompatActivity {
         Button image = (Button) findViewById(R.id.button2);
         startActivity(intent);
     }
-
-    public void sendToViewStationStatus(View view) {
-        Intent intent = new Intent(this,  CheckFuelStatusForMe.class); // Rename with correct page
-        Button image = (Button) findViewById(R.id.button3);
-        startActivity(intent);
-    }
-
 
 }
 

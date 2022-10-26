@@ -42,14 +42,14 @@ public class FualOwner extends AppCompatActivity {
 
     //Sending to Including Station :--
     public void sendToRegisterStation(View view) {
-        Intent intent = new Intent(this,  MainActivity.class); // Rename with correct page
+        Intent intent = new Intent(this,  StationOwner.class); // Rename with correct page
         Button image = (Button) findViewById(R.id.button);
         startActivity(intent);
     }
 
 
     public void sendToUpdateStationStatus(View view) {
-        Intent intent = new Intent(this,  MainActivity.class); // Rename with correct page
+        Intent intent = new Intent(this,  Retrievestationdetails.class); // Rename with correct page
         Button image = (Button) findViewById(R.id.button2);
         startActivity(intent);
     }

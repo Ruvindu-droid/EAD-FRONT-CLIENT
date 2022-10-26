@@ -33,15 +33,16 @@
             android:id="@+id/textView8"
             android:layout_width="325dp"
             android:layout_height="46dp"
-            android:text="For Checking the status of your nearest fual Queue,"
+            android:text="Take your filling Experience with Smartest Fuel Management Agents !"
             android:textColor="#403C3C"
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
 
+            app:layout_constraintHorizontal_bias="0.488"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/mapView2"
-            app:layout_constraintVertical_bias="0.631" />
+            app:layout_constraintVertical_bias="0.797" />
 
         <TextView
             android:id="@+id/textView"
@@ -191,23 +192,6 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="313dp"
-            android:layout_height="42dp"
-            android:layout_marginStart="42dp"
-            android:layout_marginEnd="42dp"
-            android:layout_marginBottom="84dp"
-            android:background="@drawable/fund_border_blue"
-            android:onClick="sendToViewStationStatus"
-            android:text="Check My Nearest Queue"
-            android:textColor="#FE2B0A"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.071"
-            app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
             android:id="@+id/mapView2"

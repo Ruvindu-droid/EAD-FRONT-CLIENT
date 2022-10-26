@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,8 +23,10 @@ public class VehicleAddToFualQ extends AppCompatActivity {
     private Retrofit retrofit;
     private RetrofitInterface retrofitInterface;
 
-    EditText vehicleNo, vehicleType, arrivalTime, stationName;
+    EditText vehicleNo, vehicleType, arrivalTime;
+    TextView stationName;
     Button AddtoQButton;
+    String  messagestationname ="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +46,10 @@ public class VehicleAddToFualQ extends AppCompatActivity {
         arrivalTime = findViewById(R.id.arrivalTime);
         stationName = findViewById(R.id.stationName);
         AddtoQButton = findViewById(R.id.AddtoQButton);
+
+        Intent intent = getIntent();
+        messagestationname = intent.getStringExtra(CheckFuelStatusForMe.RUVIMESSAGETWO);
+        stationName.setText(messagestationname.toString());
     }
 
     public void sendToInitialLanding(View view) {
@@ -55,9 +62,6 @@ public class VehicleAddToFualQ extends AppCompatActivity {
     //Implimet Your Methords Here :-
 
     public void AddtoQueue(View view) {
-
-        //Calling Station Queue Increasing Methord :-
-        AddMyVehicletoStationQueue();
 
         // Extra Button Identification :-
         Button image = (Button) findViewById(R.id.AddtoQButton);
@@ -77,10 +81,14 @@ public class VehicleAddToFualQ extends AppCompatActivity {
 
                 if (response.code() == 200) {
                     Toast.makeText(VehicleAddToFualQ.this,
-                            "Added the Vehicle successfully", Toast.LENGTH_LONG).show();
+                            "Added the Vehicle on the System Successfully !", Toast.LENGTH_LONG).show();
+
+                        //Calling Station Queue Increasing Methord :-
+                        AddMyVehicletoStationQueue();
+
                 } else if (response.code() == 400) {
                     Toast.makeText(VehicleAddToFualQ.this,
-                            "Already Added to the Queue", Toast.LENGTH_LONG).show();
+                            "The Vehicle Already Registered for Another Queue!, Please Leave it First !", Toast.LENGTH_LONG).show();
                 }
 
             }
@@ -116,7 +124,7 @@ public class VehicleAddToFualQ extends AppCompatActivity {
 
                 } else if (response.code() == 404) {
                     Toast.makeText(VehicleAddToFualQ.this,
-                            "Sorry! Station Unable to know that you are IN !", Toast.LENGTH_LONG).show();
+                            "Sorry! No Available Stations Notified that you are IN!", Toast.LENGTH_LONG).show();
                 }
 
             }

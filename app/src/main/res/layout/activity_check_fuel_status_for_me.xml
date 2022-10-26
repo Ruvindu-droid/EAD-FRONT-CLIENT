@@ -236,35 +236,49 @@
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="264dp"
+            android:layout_width="180dp"
             android:layout_height="24dp"
-            android:text="Please Eneter The Station Reached :"
+            android:text="Stations Existing On Line :"
             android:textColor="#322E2E"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.863"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.145" />
+            app:layout_constraintVertical_bias="0.134" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="52dp"
+            android:layout_height="22dp"
+            android:text="NOW"
+            android:textColor="#C0392B"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.838"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.135" />
 
         <Button
             android:id="@+id/textView4"
-            android:layout_width="226dp"
-            android:layout_height="41dp"
+            android:layout_width="108dp"
+            android:layout_height="34dp"
             android:background="@drawable/fund_border_blue"
-
-            android:text="Check Fuel Station Status"
+            android:onClick="LoadDetails"
+            android:text="Enter"
             android:textColor="#322E2E"
             android:textSize="10sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.205"
+            app:layout_constraintHorizontal_bias="0.891"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.298" />
+            app:layout_constraintVertical_bias="0.292" />
 
         <Button
             android:id="@+id/textView11"
@@ -317,6 +331,25 @@
             app:layout_constraintVertical_bias="0.415"
             tools:ignore="SpeakableTextPresentCheck" />
 
+        <EditText
+            android:id="@+id/amountkk"
+            android:layout_width="223dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/fund_border_blue"
+            android:padding="10dp"
+            android:textColor="#686161"
+            android:hint="Enter the station you Reached.."
+            android:textColorHint="#686161"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.155"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.293" />
+
         <TextView
             android:id="@+id/amount8"
             android:layout_width="193dp"
@@ -363,18 +396,17 @@
             android:layout_height="38dp"
             android:layout_marginStart="6dp"
             android:layout_marginEnd="5dp"
-            android:background="@android:drawable/btn_dropdown"
+            android:background="@android:drawable/spinner_background"
             android:padding="10dp"
             android:spinnerMode="dropdown"
             android:textColor="#686161"
-            android:textColorHint="#686161"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.72"
+            app:layout_constraintHorizontal_bias="0.742"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.201"
+            app:layout_constraintVertical_bias="0.18"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
@@ -385,7 +417,7 @@
             android:layout_marginEnd="42dp"
             android:layout_marginBottom="84dp"
             android:background="@drawable/fund_border_red"
-            android:onClick="LoadStations"
+            android:onClick="sendToAddfuelQueueWithDetails"
             android:text="Add My Vehicle To Queue Here"
             android:textColor="#1515F0"
             android:textSize="11sp"
@@ -398,11 +430,11 @@
             android:id="@+id/mapView2"
             android:layout_width="64dp"
             android:layout_height="68dp"
-            android:layout_marginBottom="560dp"
+            android:layout_marginBottom="568dp"
             android:background="@drawable/test3"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.121"
+            app:layout_constraintHorizontal_bias="0.109"
             app:layout_constraintStart_toStartOf="parent" />
 
 

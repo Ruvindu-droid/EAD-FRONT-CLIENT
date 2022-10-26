@@ -44,4 +44,8 @@ public interface RetrofitInterface {
     @POST("/station/update-station-by-name/:id")
     Call<Void> updateStationownerdetails (@Body HashMap<String, String> map);
 
+    @POST("/normaluser/get-last-R-date-By-Station-Name")
+    Call<com.example.fualapp.VehicleResult> loadealiestaddedvehiclefortheq(@Body HashMap<String, String> map);
+
+
 }

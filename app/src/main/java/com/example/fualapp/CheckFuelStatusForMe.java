@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,23 +25,23 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class CheckFuelStatusForMe extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
+    public static final String RUVIMESSAGETWO = "com.example.fualapp.RUVIMESSAGETWO";
     private Retrofit retrofit;
     private RetrofitInterface retrofitInterface;
 
-
     Spinner stationSpinner;
-    TextView vehiclesWaiting, lineStartTime, fuelStatus, petrolArrivalAt, petrolEndAt, dieselArrivalAt, dieselEndAt;
+    EditText takeinputtext;
+    TextView vehiclesWaiting, lineStartTime, fuelStatus, petrolArrivalAt, petrolEndAt, dieselArrivalAt, dieselEndAt,stationnamebyload;
     Button checkStationStatus, addVehicleToQ;
+
+
+
     String stationNameCatched;
-
-
     // Test Array Taken
     StationResult[] takefromfunction;
-
     public void setTakefromfunction(StationResult[] takefromfunction) {
         this.takefromfunction = takefromfunction;
     }
-
     // Test array to list converter
     List<String> namestofeedlist = new ArrayList<String>();
 
@@ -60,6 +61,8 @@ public class CheckFuelStatusForMe extends AppCompatActivity implements AdapterVi
 
 
         // Data Fields Imported Correctly,
+        stationnamebyload = findViewById(R.id.textView12);
+        takeinputtext = findViewById(R.id.amountkk);
         stationSpinner = findViewById(R.id.amount7);
         vehiclesWaiting = findViewById(R.id.amount6);
         lineStartTime = findViewById(R.id.amount8);
@@ -71,24 +74,27 @@ public class CheckFuelStatusForMe extends AppCompatActivity implements AdapterVi
         checkStationStatus = findViewById(R.id.textView4);
         addVehicleToQ = findViewById(R.id.AddtoQButton);
 
+        stationnamebyload.setText("XXXX");
+        //Calling Online Stations Data For Spinner :-
         LoadStations();
 
-        //===================================================TEST 1 START
+        //===================================================TEST 1 START =====================================================
 
         // Spinner click listener
            stationSpinner.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
 
-        // Spinner Drop down elements
+        // Spinner Drop down elements - Remove Later
         List<String> categories = new ArrayList<String>();
         categories.add("Item 1");
         categories.add("Item 2");
         categories.add("Item 3");
         categories.add("Item 4");
         categories.add("Badulla");
-        categories.add("Item 6");
+        categories.add("VV");
 
         // Creating adapter for spinner
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item, namestofeedlist);
+        //ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);
 
         // Drop down layout style - list view with radio button
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -96,12 +102,12 @@ public class CheckFuelStatusForMe extends AppCompatActivity implements AdapterVi
         // attaching data adapter to spinner
         stationSpinner.setAdapter(dataAdapter);
 
-        //========================================================== TEST 1 END
+        //========================================================== TEST 1 END =================================================
 
     }
 
 
-    //========================TEST 1.2 START
+    //========================TEST 1.2 START ====================================================================================
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -109,31 +115,27 @@ public class CheckFuelStatusForMe extends AppCompatActivity implements AdapterVi
         String item = parent.getItemAtPosition(position).toString();
 
         // Showing selected spinner item
-        Toast.makeText(parent.getContext(), "Selected Station is : " + item, Toast.LENGTH_LONG).show();
+        Toast.makeText(parent.getContext(), "Selected Station from Dropdown is: " + item, Toast.LENGTH_LONG).show();
 
         stationNameCatched = item;
-        LoadDetails(item);
+
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
     }
 
-    //===========================TEST 1.2 END
+    //===========================TEST 1.2 END =====================================================================================
 
 
 
 
-
-
-    public void LoadDetails(String nametoserch) {
-
-        // Button image = (Button) findViewById(R.id.textView4);
+    public void LoadDetails(View view) {
 
         HashMap<String, String> map = new HashMap<>();
 
         //Enter Station Name to search here :---------------
-        map.put("stationname", stationNameCatched);
+        map.put("stationname", takeinputtext.getText().toString());
 
         Call<StationResult> call = retrofitInterface.loadstationdata(map);
 
@@ -145,7 +147,7 @@ public class CheckFuelStatusForMe extends AppCompatActivity implements AdapterVi
 
                     StationResult result = response.body();
 
-                    //stationSpinner.setText(result.getStationname());
+                    stationnamebyload.setText(result.getStationname());
                     vehiclesWaiting.setText( result.getQueue().toString());
                     fuelStatus.setText(result.getStatus());
 
@@ -155,14 +157,14 @@ public class CheckFuelStatusForMe extends AppCompatActivity implements AdapterVi
                     dieselArrivalAt.setText(result.getDieselarrivaltime());
                     dieselEndAt.setText(result.getDieselfinishtime());
 
-                    lineStartTime.setText("Line Start Success");
-
+                    //Calling Time Taking Function :-
+                    LoadEarliestVehicleforthestation();
 
                 } else if (response.code() == 404) {
-                    Toast.makeText(CheckFuelStatusForMe.this, "Station Entered is not Exist!",
+                    Toast.makeText(CheckFuelStatusForMe.this, "Station You Entered is not On Line! Please Enter other to Continue ! ",
                             Toast.LENGTH_LONG).show();
 
-                    //stationSpinner.setText("");;
+                    stationnamebyload.setText("Not Online!");
                     vehiclesWaiting.setText("");
                     fuelStatus.setText("");
 
@@ -171,11 +173,8 @@ public class CheckFuelStatusForMe extends AppCompatActivity implements AdapterVi
 
                     dieselArrivalAt.setText("");
                     dieselEndAt.setText("");
-
                     lineStartTime.setText("");
-
                 }
-
             }
 
             @Override
@@ -189,8 +188,42 @@ public class CheckFuelStatusForMe extends AppCompatActivity implements AdapterVi
 
 
 
+// Taking Earliest Added Time of Vehicle ----------------------------------------------------------------------------------------
 
-    //---------------------------------------------------------Special Test--------------------
+    public void LoadEarliestVehicleforthestation() {
+
+        HashMap<String, String> map = new HashMap<>();
+
+        //Enter Station Name to search here :---------------
+        map.put("stationName", stationnamebyload.getText().toString());
+
+        Call<VehicleResult> call = retrofitInterface.loadealiestaddedvehiclefortheq(map);
+
+        call.enqueue(new Callback<VehicleResult>() {
+            @Override
+            public void onResponse(Call<VehicleResult> call, Response<VehicleResult> response) {
+                if (response.code() == 200) {
+
+                    VehicleResult result = response.body();
+                    lineStartTime.setText(result.getCreatedAt().toString());
+
+                } else if (response.code() == 404) {
+                    Toast.makeText(CheckFuelStatusForMe.this, "No Vehicles in this Queue Yet!",
+                            Toast.LENGTH_LONG).show();
+                    lineStartTime.setText("No Vehicles In Queue");
+                }
+            }
+            @Override
+            public void onFailure(Call<VehicleResult> call, Throwable t) {
+                Toast.makeText(CheckFuelStatusForMe.this, t.getMessage(),
+                        Toast.LENGTH_LONG).show();
+            }
+        });
+
+    }
+
+
+    //---------------------------------------------------------Special Spnier Test--------------------
 
     public void LoadStations() {
 
@@ -202,19 +235,22 @@ public class CheckFuelStatusForMe extends AppCompatActivity implements AdapterVi
 
                 if (response.code() == 200) {
 
-                    Toast.makeText(CheckFuelStatusForMe.this, "Stations Catched!",
+                    Toast.makeText(CheckFuelStatusForMe.this, "Check The Stations Online NOW!",
+                            Toast.LENGTH_LONG).show();
+
+                    Toast.makeText(CheckFuelStatusForMe.this, "Please Enter the Station You Reached to Continue !",
                             Toast.LENGTH_LONG).show();
 
                     takefromfunction =response.body();
 
                     for(int i=0;i<takefromfunction.length; i++){
-                     //   Toast.makeText(CheckFuelStatusForMe.this, "Checkk>>>>>>>>>>"+ takefromfunction[i].getStationname(), Toast.LENGTH_LONG).show();
+                      //  Toast.makeText(CheckFuelStatusForMe.this, "Check Loaded Stations > "+ takefromfunction[i].getStationname() + "Check Length of Station Arraylist > " +  takefromfunction.length, Toast.LENGTH_LONG).show();
                         namestofeedlist.add(takefromfunction[i].getStationname().toString());
                     }
 
 
                 } else if (response.code() == 404) {
-                    Toast.makeText(CheckFuelStatusForMe.this, "Sorry! Stations not catched!",
+                    Toast.makeText(CheckFuelStatusForMe.this, "Sorry! No Stations Avilable Online!",
                             Toast.LENGTH_LONG).show();
 
                 }
@@ -232,13 +268,23 @@ public class CheckFuelStatusForMe extends AppCompatActivity implements AdapterVi
 
     //----------------------------------------------------------------------------------------------------------------------
 
-
-
     public void sendToInitialLanding(View view) {
         Intent intent = new Intent(this,  FualUser.class);
-        Button image = (Button) findViewById(R.id.textView4);
         startActivity(intent);
     }
 
+    public void sendToAddfuelQueueWithDetails(View view) {
+
+        if(stationnamebyload.getText().toString().equals("Not Online!") || stationnamebyload.getText().toString().equals("XXXX")){
+            Toast.makeText(this, "Please Enter Valid Station to Continue!", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            Toast.makeText(this, "Please Enter More Details of you to Continue!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(CheckFuelStatusForMe.this,VehicleAddToFualQ.class);
+            intent.putExtra(RUVIMESSAGETWO, takeinputtext.getText().toString());
+            startActivity(intent);
+        }
+
+    }
 
 } //Class Ended

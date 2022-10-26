@@ -1,3 +1,18 @@
+/**
+ ============================================================================================================================
+ HEADER COMMENT BLOCK FOR THE .JAVA FILE
+
+ App:- SMART FUEL APP
+ For:- EAD Module Related Development - Sri Lankan Institute of Information Technology
+
+ *** This Special .java file is for :-
+ Initial page for fuel owner for navigating their activities.With necessary userfriendly designs.
+
+ Author(s): Ruvindu Kaushalya(Leader)
+
+ ============================================================================================================================
+ **/
+
 package com.example.fualapp;
 
 import android.content.Intent;
@@ -32,6 +47,7 @@ public class FualOwner extends AppCompatActivity {
 
     }
 
+    //Logging Out
     public void sendToInitialLanding(View view) {
         Intent intent = new Intent(this,  FirstNavigation.class);
         Button image = (Button) findViewById(R.id.textView4);
@@ -47,7 +63,7 @@ public class FualOwner extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+   //sending to updating station
     public void sendToUpdateStationStatus(View view) {
         Intent intent = new Intent(this,  Retrievestationdetails.class); // Rename with correct page
         Button image = (Button) findViewById(R.id.button2);

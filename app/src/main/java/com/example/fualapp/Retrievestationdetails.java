@@ -1,3 +1,18 @@
+/**
+ ============================================================================================================================
+ HEADER COMMENT BLOCK FOR THE .JAVA FILE
+
+ App:- SMART FUEL APP
+ For:- EAD Module Related Development - Sri Lankan Institute of Information Technology
+
+ *** This Special .java file is for :-
+This page is using for cheking the already entered/addedstation details of the owner. All validated and
+ here they can easily update the fuel status and inform the users.
+
+ Author(s): Nethmi Hansika
+
+ ============================================================================================================================
+ **/
 package com.example.fualapp;
 
 import android.content.Intent;
@@ -49,6 +64,9 @@ public class Retrievestationdetails extends AppCompatActivity {
 
 
     }
+
+    //Loding data from the enter button of station field (selected)
+
     public void LoadDetails(View view) {
 
         //Button image = (Button) findViewById(R.id.textView4);
@@ -96,6 +114,9 @@ public class Retrievestationdetails extends AppCompatActivity {
         });
 
     }
+
+    // Updating the data accordingly
+
     public void UpdateDetails(View view) {
 
         HashMap<String, String> map = new HashMap<>();
@@ -132,6 +153,9 @@ public class Retrievestationdetails extends AppCompatActivity {
         });
 
     }
+
+    //Navigating to home of owner
+
     public void sendToInitialLanding(View view) {
         Intent intent = new Intent(this,  FualOwner.class);
         Button image = (Button) findViewById(R.id.textView4);

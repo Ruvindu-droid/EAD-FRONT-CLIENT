@@ -1,3 +1,19 @@
+/**
+ ============================================================================================================================
+ HEADER COMMENT BLOCK FOR THE .JAVA FILE
+
+ App:- SMART FUEL APP
+ For:- EAD Module Related Development - Sri Lankan Institute of Information Technology
+
+ *** This Special .java file is for :-
+This is using as the secondary step for vehicle adding to the fuel queue with all the validations of the vehicle from both the
+ ends of entities with proper handeling queries of backend for the usage of this. User has notified Properly for all the situations.
+
+ Author(s): Praveena Tavarajah
+
+ ============================================================================================================================
+ **/
+
 package com.example.fualapp;
 
 import android.content.Intent;
@@ -52,6 +68,7 @@ public class VehicleAddToFualQ extends AppCompatActivity {
         stationName.setText(messagestationname.toString());
     }
 
+    //Navigate back to his home
     public void sendToInitialLanding(View view) {
         Intent intent = new Intent(this,  FualUser.class);
         Button image = (Button) findViewById(R.id.textView4);
@@ -61,6 +78,7 @@ public class VehicleAddToFualQ extends AppCompatActivity {
 
     //Implimet Your Methords Here :-
 
+    //Adding to the Entity for the vehicle
     public void AddtoQueue(View view) {
 
         // Extra Button Identification :-
@@ -104,7 +122,7 @@ public class VehicleAddToFualQ extends AppCompatActivity {
 
 
 
-    // New Adding For Removing Vehicle from Station Queue :-
+    // New Adding For Adding Vehicle for Station Queue Entity :-
 
     public void AddMyVehicletoStationQueue() {
 

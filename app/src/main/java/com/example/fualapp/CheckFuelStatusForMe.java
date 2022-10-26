@@ -1,3 +1,21 @@
+/**
+ ============================================================================================================================
+ HEADER COMMENT BLOCK FOR THE .JAVA FILE
+
+ App:- SMART FUEL APP
+ For:- EAD Module Related Development - Sri Lankan Institute of Information Technology
+
+ *** This Special .java file is for :-
+The Biggining of user journy of the user to ragistering his/her vehicle for the system with assigned station name existing
+ several validation tecniques and deep data base queries have used from backend to generate this class.
+ User have to select station that he have reached (from existing stations of the system/ validated) and can navigate to the next page
+ with that data. All managed with tost messages and validatens for adding and generating/retriveing data.
+
+ Author(s): Ruvindu Kaushalya(Leader)
+
+ ============================================================================================================================
+ **/
+
 package com.example.fualapp;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -129,6 +147,7 @@ public class CheckFuelStatusForMe extends AppCompatActivity implements AdapterVi
 
 
 
+//Loding data on the selected station by onclick on enter button
 
     public void LoadDetails(View view) {
 
@@ -223,7 +242,7 @@ public class CheckFuelStatusForMe extends AppCompatActivity implements AdapterVi
     }
 
 
-    //---------------------------------------------------------Special Spnier Test--------------------
+    //---------------------------------------------------------Special Spnier for showing stations at online --------------------
 
     public void LoadStations() {
 
@@ -268,11 +287,13 @@ public class CheckFuelStatusForMe extends AppCompatActivity implements AdapterVi
 
     //----------------------------------------------------------------------------------------------------------------------
 
+//Sending user back to home page
     public void sendToInitialLanding(View view) {
         Intent intent = new Intent(this,  FualUser.class);
         startActivity(intent);
     }
 
+    //user sending next page with station name if it is only validated from the system logics
     public void sendToAddfuelQueueWithDetails(View view) {
 
         if(stationnamebyload.getText().toString().equals("Not Online!") || stationnamebyload.getText().toString().equals("XXXX")){

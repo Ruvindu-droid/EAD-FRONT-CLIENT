@@ -1,3 +1,18 @@
+/**
+ ============================================================================================================================
+ HEADER COMMENT BLOCK FOR THE .JAVA FILE
+
+ App:- SMART FUEL APP
+ For:- EAD Module Related Development - Sri Lankan Institute of Information Technology
+
+ *** This Special .java file is for :-
+For Calling Server accordingly
+
+ Author(s): Ruvindu Kaushalya(Leader), praveena tawarajah, Netmi Hansika
+
+ ============================================================================================================================
+ **/
+
 package com.example.fualapp;
 
 import java.util.HashMap;

@@ -1,3 +1,18 @@
+/**
+ ============================================================================================================================
+ HEADER COMMENT BLOCK FOR THE .JAVA FILE
+
+ App:- SMART FUEL APP
+ For:- EAD Module Related Development - Sri Lankan Institute of Information Technology
+
+ *** This Special .java file is for :-
+ For catiching Entity related data for the frontend usages
+
+ Author(s): Ruvindu Kaushalya(Leader),Netmi Hansika, Praveena Tavarajah
+
+ ============================================================================================================================
+ **/
+
 package com.example.fualapp;
 
 public class VehicleResult {

@@ -1,3 +1,20 @@
+/**
+ ============================================================================================================================
+ HEADER COMMENT BLOCK FOR THIS SPECIFIC .JAVA FILE
+
+ App:- SMART FUEL APP
+ For:- EAD Module Related Development - Sri Lankan Institute of Information Technology
+
+ *** This Special .java file is for :-
+ SQL Lite Data base Structre creation for crating methords to use with usermaster.java to manage user data locally within the
+ data base, functions implimented for them.
+
+ Author(s): Ruvindu Kaushalya(Leader)
+
+ ============================================================================================================================
+ **/
+
+
 package com.example.fualapp.Database;
 
 import android.content.ContentValues;
@@ -33,7 +50,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
         db.execSQL(SQL_CREATE_ENTRIES);
 
-    }
+    } //Table Cration
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
@@ -51,7 +68,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
         long newRowID = db.insert(UsersMaster.Users.TABLE_NAME,null,values);
         return newRowID;
-    }
+    } //Adding user data to database
 
 
 
@@ -101,7 +118,7 @@ public class DBHelper extends SQLiteOpenHelper {
         }else {
             return null;
         }
-    }
+    } //Read Data from data base and sending
 
 
 }

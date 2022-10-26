@@ -1,3 +1,17 @@
+/**
+ ============================================================================================================================
+ HEADER COMMENT BLOCK FOR THE .JAVA FILE
+
+ App:- SMART FUEL APP
+ For:- EAD Module Related Development - Sri Lankan Institute of Information Technology
+
+ *** This Special .java file is for :-
+ Adding the station with validations. backend handelled properly
+
+ Author(s): Netmi Hansika
+
+ ============================================================================================================================
+ **/
 package com.example.fualapp;
 
 import android.content.Intent;
@@ -47,6 +61,7 @@ public class StationOwner extends AppCompatActivity {
         insertbutton = findViewById(R.id.insertbutton);
     }
 
+    //Adding details with the call to database
     public void AddDetails(View view) {
 
         HashMap<String, String> map = new HashMap<>();
@@ -84,6 +99,7 @@ public class StationOwner extends AppCompatActivity {
 
     }
 
+    //send to initial home of owner
     public void sendToInitialLanding(View view) {
         Intent intent = new Intent(this,  FualOwner.class);
         Button image = (Button) findViewById(R.id.textView4);

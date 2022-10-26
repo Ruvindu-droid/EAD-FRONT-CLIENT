@@ -1,3 +1,18 @@
+/**
+ ============================================================================================================================
+ HEADER COMMENT BLOCK FOR THE .JAVA FILE
+
+ App:- SMART FUEL APP
+ For:- EAD Module Related Development - Sri Lankan Institute of Information Technology
+
+ *** This Special .java file is for :-
+Useing sql lite and registering for the system locally
+
+ Author(s): Ruvindu Kaushalya(Leader)
+
+ ============================================================================================================================
+ **/
+
 package com.example.fualapp;
 
 import android.content.Intent;
@@ -28,7 +43,7 @@ public class Register extends AppCompatActivity {
         etpassword = findViewById(R.id.RegPwdinp);
     }
 
-
+//check radio button
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -60,7 +75,7 @@ public class Register extends AppCompatActivity {
         }
     }
 
-
+//Navigating back to initial page
     public void sendToInitialLogin(View view) {
         Intent intent = new Intent(this,  Authentication.class);
         Button image = (Button) findViewById(R.id.welcome_main_login_btn);

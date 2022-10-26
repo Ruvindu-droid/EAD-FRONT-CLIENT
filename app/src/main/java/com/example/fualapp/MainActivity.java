@@ -1,3 +1,18 @@
+/**
+ ============================================================================================================================
+ HEADER COMMENT BLOCK FOR THE .JAVA FILE
+
+ App:- SMART FUEL APP
+ For:- EAD Module Related Development - Sri Lankan Institute of Information Technology
+
+ *** This Special .java file is for :-
+ Main activity loanging freely and adjesting Base URL for the use of all other pages
+
+ Author(s): Ruvindu Kaushalya(Leader)
+
+ ============================================================================================================================
+ **/
+
 package com.example.fualapp;
 
 import android.content.Intent;
@@ -49,14 +64,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    // Button Action for navigating to the Registering and navigating to the pages (ADD Your Page Path from Here as TESTING DEVELOPNMENT)-->>>
+    // Button Action for navigating to the Registering and navigating to the pages
     public void GoRegAct(View view) {
         Toast.makeText(MainActivity.this, "You Are Warmly Welcomed !", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(MainActivity.this, FirstNavigation.class);
         startActivity(intent);
     }
 
-    //Button action to navigate to the FuelUser
+    //Button action to navigate to the FuelUser (For testing Puposes)
     public void move1(View view) {
         Toast.makeText(MainActivity.this, "Fual user", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(MainActivity.this, CheckMyVehicleInQ.class);

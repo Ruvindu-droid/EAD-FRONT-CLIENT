@@ -1,3 +1,18 @@
+/**
+ ============================================================================================================================
+ HEADER COMMENT BLOCK FOR THE .JAVA FILE
+
+ App:- SMART FUEL APP
+ For:- EAD Module Related Development - Sri Lankan Institute of Information Technology
+
+ *** This Special .java file is for :-
+Checking the vehicle states (Enter the number of vehicle/ Registered before) of fulel que with all the details. Can leave the Que with this pages
+ All the necessary methords and quries have called to fix it from data  base.
+
+ Author(s): Praveena Thawarajah
+
+ ============================================================================================================================
+ **/
 package com.example.fualapp;
 
 import android.content.Intent;
@@ -50,7 +65,7 @@ public class CheckMyVehicleInQ extends AppCompatActivity {
 
     }
 
-
+//Loding vehicle details with enter button of the number
     public void LoadDetails(View view) {
 
         Button image = (Button) findViewById(R.id.textView4);
@@ -95,7 +110,7 @@ public class CheckMyVehicleInQ extends AppCompatActivity {
 
     }
 
-
+//Removing vehicle from Vehicle entity of database by notifying with validations
     public void RemoveMyVehicle(View view) {
 
         //Calling Station Queue Reducing Methord :-
@@ -147,7 +162,7 @@ public class CheckMyVehicleInQ extends AppCompatActivity {
     }
 
 
-    // New Adding For Removing Vehicle from Station Queue :-
+    // Removing Vehicle from Station Queue :-
 
     public void RemoveMyVehiclefromStationQueue() {
 

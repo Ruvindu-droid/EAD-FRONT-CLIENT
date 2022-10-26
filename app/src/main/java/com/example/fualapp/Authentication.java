@@ -1,3 +1,18 @@
+/**
+ ============================================================================================================================
+ HEADER COMMENT BLOCK FOR THE .JAVA FILE
+
+ App:- SMART FUEL APP
+ For:- EAD Module Related Development - Sri Lankan Institute of Information Technology
+
+ *** This Special .java file is for :-
+ USE SQL Lite Data base and authentication management with methords and navigate with paths accordingly
+
+ Author(s): Ruvindu Kaushalya(Leader)
+
+ ============================================================================================================================
+ **/
+
 package com.example.fualapp;
 
 import android.content.Intent;
@@ -31,7 +46,7 @@ public class Authentication extends AppCompatActivity {
     }
 
 
-
+// Signin in with checking user name and password and automatically detect the type and navigated
     public void signin(View view){
 
         DBHelper dbHelper = new DBHelper(this);
@@ -69,7 +84,7 @@ public class Authentication extends AppCompatActivity {
         }
     }
 
-
+//Navigating to Register Activity
     public void GoRegAct(View view) {
 
         Toast.makeText(Authentication.this, "You Are Navigating Back!", Toast.LENGTH_SHORT).show();

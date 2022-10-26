@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Button Action for navigating to the Registering and navigating to the pages (ADD Your Page Path from Here as TESTING DEVELOPNMENT)-->>>
     public void GoRegAct(View view) {
-        Toast.makeText(MainActivity.this, "You Are Navigating to the Test SQL lite Activity Path - By Ruvindu !", Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this, "You Are Warmly Welcomed !", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(MainActivity.this, FirstNavigation.class);
         startActivity(intent);
     }

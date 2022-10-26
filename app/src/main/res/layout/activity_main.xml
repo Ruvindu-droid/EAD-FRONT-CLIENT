@@ -9,11 +9,60 @@
 
 
     <Button
-        android:id="@+id/addVehicleBtn"
-        android:layout_width="168dp"
+        android:id="@+id/welcome_main_login_btn"
+        android:layout_width="310dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:onClick="move1"
-        android:text="Begin My Journey" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="59dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="131dp"
+        android:background="@drawable/fund_border_red"
+        android:onClick="GoRegAct"
+        android:padding="10dp"
+        android:text="Take Me the Journey"
+        android:textAllCaps="false"
+        android:textColor="#FE2B0A"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:ignore="RtlCompat" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="303dp"
+        android:layout_height="323dp"
+
+        android:layout_above="@+id/welcome_main_join_now_btn"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="173dp"
+        app:srcCompat="@drawable/test3" />
+
+    <TextView
+        android:id="@+id/RegisterLable"
+        android:layout_width="261dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="409dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="260dp"
+        android:text="Smart Fual App"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    ///---------
 
 </RelativeLayout>

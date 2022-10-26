@@ -23,10 +23,10 @@
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.127"
+            app:layout_constraintHorizontal_bias="0.139"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/mapView2"
-            app:layout_constraintVertical_bias="0.278" />
+            app:layout_constraintVertical_bias="0.298" />
 
         <TextView
             android:id="@+id/textView8"
@@ -37,10 +37,10 @@
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.128"
+            app:layout_constraintHorizontal_bias="0.139"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/mapView2"
-            app:layout_constraintVertical_bias="0.379" />
+            app:layout_constraintVertical_bias="0.406" />
 
         <TextView
             android:id="@+id/textView9"
@@ -51,10 +51,10 @@
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.135"
+            app:layout_constraintHorizontal_bias="0.143"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/mapView2"
-            app:layout_constraintVertical_bias="0.471" />
+            app:layout_constraintVertical_bias="0.516" />
 
         <TextView
             android:id="@+id/textView12"
@@ -65,10 +65,10 @@
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.135"
+            app:layout_constraintHorizontal_bias="0.15"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/mapView2"
-            app:layout_constraintVertical_bias="0.554" />
+            app:layout_constraintVertical_bias="0.612" />
 
         <TextView
             android:id="@+id/textView"
@@ -93,7 +93,7 @@
             app:layout_constraintHorizontal_bias="0.487"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.514"
+            app:layout_constraintVertical_bias="0.586"
             app:srcCompat="@drawable/account_box" />
 
         <TextView
@@ -106,10 +106,10 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.863"
+            app:layout_constraintHorizontal_bias="0.891"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.145" />
+            app:layout_constraintVertical_bias="0.162" />
 
         <Button
             android:id="@+id/textView4"
@@ -123,10 +123,10 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.184"
+            app:layout_constraintHorizontal_bias="0.205"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.299" />
+            app:layout_constraintVertical_bias="0.315" />
 
         <Button
             android:id="@+id/textView11"
@@ -154,10 +154,10 @@
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.124"
+            app:layout_constraintHorizontal_bias="0.137"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/mapView2"
-            app:layout_constraintVertical_bias="0.184" />
+            app:layout_constraintVertical_bias="0.198" />
 
         <EditText
             android:id="@+id/petrolarrivaltime_1"
@@ -173,10 +173,10 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.849"
+            app:layout_constraintHorizontal_bias="0.851"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.383"
+            app:layout_constraintVertical_bias="0.395"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <EditText
@@ -193,10 +193,10 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.849"
+            app:layout_constraintHorizontal_bias="0.851"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.46"
+            app:layout_constraintVertical_bias="0.471"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <EditText
@@ -213,10 +213,10 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.849"
+            app:layout_constraintHorizontal_bias="0.851"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.531"
+            app:layout_constraintVertical_bias="0.552"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <EditText
@@ -233,10 +233,10 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.849"
+            app:layout_constraintHorizontal_bias="0.851"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.602"
+            app:layout_constraintVertical_bias="0.636"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <EditText
@@ -253,10 +253,10 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.849"
+            app:layout_constraintHorizontal_bias="0.851"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.67"
+            app:layout_constraintVertical_bias="0.717"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <EditText
@@ -273,10 +273,10 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.72"
+            app:layout_constraintHorizontal_bias="0.711"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.201"
+            app:layout_constraintVertical_bias="0.215"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
@@ -285,7 +285,7 @@
             android:layout_height="40dp"
             android:layout_marginStart="42dp"
             android:layout_marginEnd="42dp"
-            android:layout_marginBottom="156dp"
+            android:layout_marginBottom="116dp"
             android:background="@drawable/fund_border_red"
             android:onClick="UpdateDetails"
             android:text="Update the Station Details"
@@ -300,7 +300,7 @@
             android:id="@+id/mapView2"
             android:layout_width="64dp"
             android:layout_height="68dp"
-            android:layout_marginBottom="560dp"
+            android:layout_marginBottom="548dp"
             android:background="@drawable/car4"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

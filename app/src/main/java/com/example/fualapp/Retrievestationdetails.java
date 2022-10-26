@@ -133,7 +133,7 @@ public class Retrievestationdetails extends AppCompatActivity {
 
     }
     public void sendToInitialLanding(View view) {
-        Intent intent = new Intent(this,  FualUser.class);
+        Intent intent = new Intent(this,  FualOwner.class);
         Button image = (Button) findViewById(R.id.textView4);
         startActivity(intent);
     }

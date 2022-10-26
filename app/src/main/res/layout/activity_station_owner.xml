@@ -57,10 +57,11 @@
             app:layout_constraintTop_toBottomOf="@+id/mapView2"
             app:layout_constraintVertical_bias="0.553" />
 
+
         <TextView
             android:id="@+id/textView10"
             android:layout_width="319dp"
-            android:layout_height="38dp"
+            android:layout_height="29dp"
             android:text="Please Enter Diesel Finish Time Here"
             android:textColor="#403C3C"
             android:textSize="15sp"
@@ -69,8 +70,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/mapView2"
-            app:layout_constraintVertical_bias="0.729" />
-
+            app:layout_constraintVertical_bias="0.717" />
 
         <TextView
             android:id="@+id/textView"
@@ -94,7 +94,7 @@
             app:layout_constraintHorizontal_bias="0.589"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.895"
+            app:layout_constraintVertical_bias="0.916"
             app:srcCompat="@drawable/account_box" />
 
         <TextView
@@ -107,17 +107,17 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.623"
+            app:layout_constraintHorizontal_bias="0.626"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.147" />
+            app:layout_constraintVertical_bias="0.153" />
 
         <Button
             android:id="@+id/textView4"
             android:layout_width="178dp"
             android:layout_height="32dp"
             android:layout_marginStart="164dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="12dp"
             android:background="@drawable/fund_border_blue"
             android:onClick="sendToInitialLanding"
             android:text="Back to Home"
@@ -222,7 +222,7 @@
             android:layout_width="318dp"
             android:layout_height="36dp"
             android:layout_marginStart="6dp"
-            android:layout_marginTop="92dp"
+            android:layout_marginTop="80dp"
             android:layout_marginEnd="5dp"
             android:background="@drawable/fund_border_blue"
             android:inputType="text"
@@ -231,7 +231,7 @@
             android:textColorHint="#686161"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.439"
+            app:layout_constraintHorizontal_bias="0.451"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView9"
             tools:ignore="SpeakableTextPresentCheck" />
@@ -241,7 +241,7 @@
             android:layout_width="318dp"
             android:layout_height="36dp"
             android:layout_marginStart="6dp"
-            android:layout_marginTop="132dp"
+            android:layout_marginTop="116dp"
             android:layout_marginEnd="5dp"
             android:background="@drawable/fund_border_blue"
             android:hint="Status"
@@ -262,7 +262,7 @@
             android:layout_height="38dp"
             android:layout_marginStart="42dp"
             android:layout_marginEnd="42dp"
-            android:layout_marginBottom="28dp"
+            android:layout_marginBottom="32dp"
             android:background="@drawable/fund_border_red"
             android:onClick="AddDetails"
             android:text="Add Station Details"
@@ -271,18 +271,18 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.071"
+            app:layout_constraintHorizontal_bias="0.058"
             app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
             android:id="@+id/mapView2"
             android:layout_width="64dp"
             android:layout_height="68dp"
-            android:layout_marginBottom="560dp"
+            android:layout_marginBottom="556dp"
             android:background="@drawable/testlogo01"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.135"
+            app:layout_constraintHorizontal_bias="0.138"
             app:layout_constraintStart_toStartOf="parent" />
 
 
